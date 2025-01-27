@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <link rel="stylesheet" href="utility.css">
+      <link rel="stylesheet" href="style.css">
+      <title>Spotify Clone</title>
+</head>
+
+<body>
+      <div class="nav d-flex">
+            <div class="logo invert cursor-pointer"><img src="logo.svg" alt="Logo"></div>
+            <div class="hamburger invert cursor-pointer d-flex ms-2"><img src="hamburger.svg" alt="Logo"></div>
+            <div class="margin-M flex w-60 mx-auto align-center">
+                  <button class="home btn flex btn-dark rounded-circle p-0">
+                        <img class="invert p-2" src="home.svg" alt="Home">
+                  </button>
+                  <form class=" d-flex size ms-2 pe-1 display-block border-0 createplaylist rounded-pill "
+                        role="search">
+                        <div class="invert sicon ms-2"><img src="search.svg" alt="search"></div>
+                        <input class=" display-block w-100 b-none createplaylist place-color  text-light ps-3"
+                              type="search" placeholder="What do you want to play?" aria-label="Search">
+                        <div class="line ms-2 bg-secondary "></div>
+                        <div>
+                              <img class="invert ps-2 pe-2 pt-2 cursor-pointer " src="browse.svg" alt="Home">
+                        </div>
+                  </form>
+                  <button class=" p-0 flex signu-bg-c pos-signu text-secondary position-absolute border-0 fw-bold">
+                        Sign up
+                  </button>
+                  <div
+                        class=" pos-login flex align-center justify-content-center  ps-4 pe-4 pt-2 pb-2 text-dark position-absolute  bg-light rounded-pill">
+                        <button class="btn btn-sm fw-bold">Log in</button>
+                  </div>
+            </div>
+      </div>
+      <div class="main flex ">
+
+
+            <div class="left ">
+                  <div class="lib d-flex p-4 pt-4 pb-5 align-center justify-content-between">
+                        <img class="invert" src="library.svg" alt="Library">
+                        <div class="t-lib fw-bold text-secondary">Your Library</div>
+                        <img class="cross invert cursor-pointer" src="cross.svg" alt="Cancel">
+                  </div>
+                  <div class="libscroll h-100">
+                        <div class="createplaylist rounded-3 me-2 ms-2">
+                              <div class="p-3  text-light m-3">
+                                    <h6 class="fw-bold">Create your first playlist</h6>
+                                    <p class="text-sm">it's easy we'll help you</p>
+                                    <button
+                                          class="btn btn-sm btn-light rounded-pill  fw-bold ps-3 pe-3 flex align-center">Create
+                                          playlist</button>
+                              </div>
+                        </div>
+                        <div class="createplaylist me-2 ms-2 mt-4 rounded-3">
+                              <div class="p-3  text-light m-3">
+                                    <h6 class="fw-bold">Let's find some podcasts to follow</h6>
+                                    <p class="text-sm">We'll keep you updated on new episodes</p>
+                                    <button
+                                          class="btn btn-sm btn-light rounded-pill  fw-bold ps-3 pe-3 flex align-center">Browse
+                                          podcasts</button>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="leftfooter container me-2 ms-2 mt-5">
+                        <div class="row row-cols-4 flex text-align-center">
+                              <div class="col-2 cursor-pointer">
+                                    <p><a class="link-offset-2 link-underline link-underline-opacity-0 link-secondary cursor-pointer">Legal</a>
+                                    </p>
+                              </div>
+                              <div class="col-5">
+                                    <p><a class="link-offset-2 link-underline link-underline-opacity-0 cursor-pointer link-secondary">Safety
+                                                & Privacy Center</a></p>
+                              </div>
+                              <div class="col-4">
+                                    <p><a class="link-offset-2 link-underline link-underline-opacity-0 cursor-pointer link-secondary">Privacy
+                                                Policy</a></p>
+                              </div>
+                              <div class="col-2">
+                                    <p><a class="link-offset-2 link-underline link-underline-opacity-0 cursor-pointer link-secondary">Cookies</a>
+                                    </p>
+                              </div>
+                              <div class="col">
+                                    <p><a class="link-offset-2 link-underline link-underline-opacity-0 cursor-pointer link-secondary">About
+                                                Ads</a></p>
+                              </div>
+                              <div class="col">
+                                    <p><a class="link-offset-2 link-underline link-underline-opacity-0 cursor-pointer link-secondary">Accessibility</a>
+                                    </p>
+                              </div>
+                        </div>
+                        <div class="cook">
+                              <a
+                                    class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover cursor-pointer link-light fw-bold">
+                                    Cookies
+                              </a>
+                        </div>
+                        <div
+                              class="langbtn rounded-pill border border-secondary cursor-pointer flex justify-content-center align-center mt-4">
+                              <div class="langimg invert ms-2"><img src="lang.svg" alt="Language"></div>
+                              <button class="btn btn-sm border-0 text-light fw-bold ">
+                                    English
+                              </button>
+                        </div>
+                  </div>
+            </div>
+
+
+            <div class="right">
+                  <div class="btext d-flex p-4 mt-4 fw-bold text-light ">
+                        <h4><strong>Browse all</strong></h4>
+                  </div>
+                  <div class="container ConWidth-M">
+                        <div class="row ms-2 a">
+                              <a class="right-boxes rounded-3 m-2 p-3 link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0  link-light"
+                                    style="background-color: #dc148c;" href="new-page1.html">
+                                    <div class=" text-light cursor-pointer">
+                                          <h4 class="fw-bold">Music</h4>
+                                          <div class="rounded-3 "><img aria-hidden="false" draggable="false"
+                                                      loading="lazy"
+                                                      src="https://i.scdn.co/image/ab67fb8200005caf474a477debc822a3a45c5acb"
+                                                      alt=""
+                                                      class="mMx2LUixlnN_Fu45JpFB WDC2Yzs811n7JCYtYQzc Yn2Ei5QZn19gria6LjZj">
+                                          </div>
+                                    </div>
+                              </a>
+                              <a class="right-boxes rounded-3 m-2 p-3 link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0  link-light"
+                                    style="background-color: #006450;" href="hamburger.svg">
+                                    <div class=" text-light cursor-pointer">
+                                          <h4 class="fw-bold">Podcasts</h4>
+                                          <div class="rounded-3  "><img aria-hidden="false" draggable="false"
+                                                      loading="lazy"
+                                                      src="https://i.scdn.co/image/ab6765630000ba8a81f07e1ead0317ee3c285bfa"
+                                                      alt=""
+                                                      class="mMx2LUixlnN_Fu45JpFB WDC2Yzs811n7JCYtYQzc Yn2Ei5QZn19gria6LjZj">
+                                          </div>
+                                    </div>
+                              </a>
+                              <a class="right-boxes rounded-3 m-2 p-3 link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0  link-light"
+                                    style="background-color: #8f0fdf;" href="hamburger.svg">
+                                    <div class=" text-light cursor-pointer">
+                                          <h4 class="fw-bold">Live Events</h4>
+                                          <div><img aria-hidden="false" draggable="false" loading="lazy"
+                                                      src="https://concerts.spotifycdn.com/images/live-events_category-image.jpg"
+                                                      alt=""
+                                                      class="mMx2LUixlnN_Fu45JpFB WDC2Yzs811n7JCYtYQzc Yn2Ei5QZn19gria6LjZj">
+                                          </div>
+                                    </div>
+                              </a>
+                              <a class="right-boxes rounded-3 m-2 p-3 link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0  link-light"
+                                    style="background-color: #1e3264;" href="hamburger.svg">
+                                    <div class=" text-light cursor-pointer">
+                                          <h4 class="fw-bold">Made for you</h4>
+                                          <div><img aria-hidden="false" draggable="false" loading="lazy"
+                                                      src="https://t.scdn.co/images/ea364e99656e46a096ea1df50f581efe"
+                                                      alt=""
+                                                      class="mMx2LUixlnN_Fu45JpFB WDC2Yzs811n7JCYtYQzc Yn2Ei5QZn19gria6LjZj">
+                                          </div>
+                                    </div>
+                              </a>
+                        </div>
+                        <div class="row ms-2">
+                              <a class="right-boxes rounded-3 m-2 p-3 link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0  link-light"
+                                    style="background-color: #ba5d07;" href="hamburger.svg">
+                                    <div class=" text-light cursor-pointer">
+                                          <h4 class="fw-bold">Telugu</h4>
+                                          <div><img aria-hidden="false" draggable="false" loading="lazy"
+                                                      src="https://i.scdn.co/image/ab67fb8200005caf80699a8b7d59a21b38f964bd"
+                                                      alt=""
+                                                      class="mMx2LUixlnN_Fu45JpFB WDC2Yzs811n7JCYtYQzc Yn2Ei5QZn19gria6LjZj">
+                                          </div>
+                                    </div>
+                              </a>
+                              <div class="right-boxes rounded-3 m-2  p-3 text-light "
+                                    style="background-color: #0d73ec;">
+                                    <h4 class="fw-bold">Podcasts Charts</h4>
+                                    <div><img aria-hidden="false" draggable="false" loading="lazy"
+                                                src="https://t.scdn.co/images/7262179db37c498480ef06bfacb60310.jpeg"
+                                                alt=""
+                                                class="mMx2LUixlnN_Fu45JpFB WDC2Yzs811n7JCYtYQzc Yn2Ei5QZn19gria6LjZj">
+                                    </div>
+                              </div>
+                              <div class="right-boxes rounded-3 m-2 p-3 text-light " style="background-color: #8e66ac;">
+                                    <h4 class="fw-bold">Podcasts New Releases</h4>
+                                    <div><img aria-hidden="false" draggable="false" loading="lazy"
+                                                src="https://t.scdn.co/images/209c867f5bb34076b0dcc9deeb1868e6" alt=""
+                                                class="mMx2LUixlnN_Fu45JpFB WDC2Yzs811n7JCYtYQzc Yn2Ei5QZn19gria6LjZj">
+                                    </div>
+                              </div>
+                              <div class="right-boxes rounded-3 m-2 p-3 text-light " style="background-color: #e13300">
+                                    <h4 class="fw-bold w-25">Video Podcasts</h4>
+                                    <div><img class="rounded-3" aria-hidden="false" draggable="false" loading="lazy"
+                                                src="https://i.scdn.co/image/ab67fb8200005caf474a477debc822a3a45c5acb"
+                                                alt=""
+                                                class="mMx2LUixlnN_Fu45JpFB WDC2Yzs811n7JCYtYQzc Yn2Ei5QZn19gria6LjZj">
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="row ms-2">
+                              <div class="right-boxes rounded-3 m-2 p-3 text-light " style="background-color: #608108;">
+                                    <h4 class="fw-bold">New Releases</h4>
+                                    <div><img aria-hidden="false" draggable="false" loading="lazy"
+                                                src="https://i.scdn.co/image/ab67fb8200005caf194fec0fdc197fb9e4fe8e64"
+                                                alt=""
+                                                class="mMx2LUixlnN_Fu45JpFB WDC2Yzs811n7JCYtYQzc Yn2Ei5QZn19gria6LjZj">
+                                    </div>
+                              </div>
+                              <div class="right-boxes rounded-3 m-2  p-3 text-light "
+                                    style="background-color: #dc148c;">
+                                    <h4 class="fw-bold">Hindi</h4>
+                                    <div><img aria-hidden="false" draggable="false" loading="lazy"
+                                                src="https://i.scdn.co/image/ab67fb8200005caff5976b97bcf10d98acbae2cd"
+                                                alt=""
+                                                class="mMx2LUixlnN_Fu45JpFB WDC2Yzs811n7JCYtYQzc Yn2Ei5QZn19gria6LjZj">
+                                    </div>
+                              </div>
+                              <div class="right-boxes rounded-3 m-2 p-3 text-light " style="background-color: #b02897;">
+                                    <h4 class="fw-bold">Punjabi</h4>
+                                    <div><img aria-hidden="false" draggable="false" loading="lazy"
+                                                src="https://i.scdn.co/image/ab67fb8200005caf4f1aa71a9cdcffdf8430c070"
+                                                alt=""
+                                                class="mMx2LUixlnN_Fu45JpFB WDC2Yzs811n7JCYtYQzc Yn2Ei5QZn19gria6LjZj">
+                                    </div>
+                              </div>
+                              <div class="right-boxes rounded-3 m-2 p-3 text-light " style="background-color: #ba5d07">
+                                    <h4 class="fw-bold w-25">Tamil</h4>
+                                    <div><img aria-hidden="false" draggable="false" loading="lazy"
+                                                src="https://i.scdn.co/image/ab67fb8200005cafae68f35dc5d86af7a1c1b58f"
+                                                alt=""
+                                                class="mMx2LUixlnN_Fu45JpFB WDC2Yzs811n7JCYtYQzc Yn2Ei5QZn19gria6LjZj">
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="row ms-2">
+                              <div class="right-boxes rounded-3 m-2 p-3 text-light " style="background-color: #777777;">
+                                    <h4 class="fw-bold">Business & Technology</h4>
+                                    <div><img aria-hidden="false" draggable="false" loading="lazy"
+                                                src="https://i.scdn.co/image/e227cd9674618024276c65f1213fb05af34cf512"
+                                                alt=""
+                                                class="mMx2LUixlnN_Fu45JpFB WDC2Yzs811n7JCYtYQzc Yn2Ei5QZn19gria6LjZj">
+                                    </div>
+                              </div>
+                              <div class="right-boxes rounded-3 m-2  p-3 text-light "
+                                    style="background-color: #8d67ab;">
+                                    <h4 class="fw-bold">Charts</h4>
+                                    <div><img aria-hidden="false" draggable="false" loading="lazy"
+                                                src="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg"
+                                                alt=""
+                                                class="mMx2LUixlnN_Fu45JpFB WDC2Yzs811n7JCYtYQzc Yn2Ei5QZn19gria6LjZj">
+                                    </div>
+                              </div>
+
+                              <div class="right-boxes rounded-3 m-2 p-3 text-light " style="background-color: #477d95;">
+                                    <h4 class="fw-bold">Malyalam</h4>
+                                    <div><img aria-hidden="false" draggable="false" loading="lazy"
+                                                src="https://i.scdn.co/image/ab67fb8200005caf77a5fdbc439492d09d3d84fb"
+                                                alt=""
+                                                class="mMx2LUixlnN_Fu45JpFB WDC2Yzs811n7JCYtYQzc Yn2Ei5QZn19gria6LjZj">
+                                    </div>
+                              </div>
+                              <div class="right-boxes rounded-3 m-2 p-3 text-light " style="background-color: #e13300">
+                                    <h4 class="fw-bold w-25">Bhojpuri</h4>
+                                    <div><img aria-hidden="false" draggable="false" loading="lazy"
+                                                src="https://i.scdn.co/image/ab67fb8200005cafe362fbcb5932b28679cf00f8"
+                                                alt=""
+                                                class="mMx2LUixlnN_Fu45JpFB WDC2Yzs811n7JCYtYQzc Yn2Ei5QZn19gria6LjZj">
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="F1 d-flex mt-5">
+                              <div class="rightfooter d-flex ms-3">
+                                    <div class="text-light m-2 ms-3">
+                                          <ul class="list-group ">
+                                                <li class="fw-bold mb-2">Company</li>
+                                                <li class="mb-3"><a
+                                                            class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-light"
+                                                            href="#">
+                                                            About
+                                                      </a></li>
+                                                <li class="mb-3"><a
+                                                            class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-light"
+                                                            href="#">
+                                                            Job
+                                                      </a></li>
+                                                <li class="mb-3"><a
+                                                            class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-light"
+                                                            href="#">
+                                                            For the Records
+                                                      </a></li>
+                                          </ul>
+                                    </div>
+                                    <div class="text-light m-2 ms-3">
+                                          <ul class="list-group">
+                                                <li class="fw-bold mb-2 ">Communities</li>
+                                                <li class="mb-3"><a
+                                                            class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-light"
+                                                            href="#">
+                                                            For Artists
+                                                      </a></li>
+                                                <li class="mb-3"><a
+                                                            class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-light"
+                                                            href="#">
+                                                            Developers
+                                                      </a></li>
+                                                <li class="mb-3"><a
+                                                            class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-light"
+                                                            href="#">
+                                                            Advertising
+                                                      </a></li>
+                                                <li class="mb-3"><a
+                                                            class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-light"
+                                                            href="#">
+                                                            Investors
+                                                      </a></li>
+                                                <li class="mb-3"><a
+                                                            class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-light"
+                                                            href="#">
+                                                            Vendors
+                                                      </a></li>
+                                          </ul>
+                                    </div>
+                              </div>
+
+                              <div class="F2 ms-5">
+                                    <div class="rightfooter d-flex ms-3 ">
+                                          <div class=" text-light m-2 ms-3">
+                                                <ul class="list-group">
+                                                      <li class="fw-bold mb-2">Useful Links</li>
+                                                      <li class="mb-3"><a
+                                                                  class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-light"
+                                                                  href="#">
+                                                                  Support
+                                                            </a></li>
+                                                      <li class="mb-3"><a
+                                                                  class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-light"
+                                                                  href="#">
+                                                                  Free Mobile App
+                                                            </a></li>
+                                          </div>
+                                          <div class=" text-light m-2 ms-3">
+                                                <ul class="list-group">
+                                                      <li class="fw-bold mb-2">Spotify Plans</li>
+                                                      <li class="mb-3"><a
+                                                                  class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-light"
+                                                                  href="#">
+                                                                  Premium Indvidual
+                                                            </a></li>
+                                                      <li class="mb-3"><a
+                                                                  class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-light"
+                                                                  href="#">
+                                                                  Premium Duo
+                                                            </a></li>
+                                                      <li class="mb-3"><a
+                                                                  class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-light"
+                                                                  href="#">
+                                                                  Premium Family
+                                                            </a></li>
+                                                      <li class="mb-3"><a
+                                                                  class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-light"
+                                                                  href="#">
+                                                                  Premium Student
+                                                            </a></li>
+                                                      <li class="mb-3"><a
+                                                                  class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-light"
+                                                                  href="#">
+                                                                  Spotify Free
+                                                            </a></li>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div class="socialmedia d-flex gap-2">
+                                    <button class="btn-i"><img class="invert" src="insta.svg" alt="Instagram"></button>
+                                    <button class="btn-i"><img class="invert" src="tweet.svg" alt="Instagram"></button>
+                                    <button class="btn-i"><img class="invert" src="facebook.svg"
+                                                alt="Instagram"></button>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="hline"></div>
+                  <p class="patent mt-3 p-4 fs-6 text-light">© 2024 Spotify AB</p>
+            </div>
+            
+      </div>
+
+      <script src="script.js"></script>
+</body>
+
+</html>
